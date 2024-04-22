@@ -32,7 +32,7 @@ function displayMovies(movies) {
         .map(
             movie =>    `<div class="movie-card">
                             <img src="${imageBaseUrl}${movie.poster_path}"/>
-                            <p>⭐${movie.vote_average}</p>
+                            <p>⭐${Number(movie.vote_average).toFixed(1)}</p>
                             <h1>${movie.title}</h1>
                         </div>`    
     )
