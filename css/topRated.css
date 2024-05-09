@@ -87,22 +87,30 @@ header {
     display: flex;
     flex-direction: column;
     color: white;
-    width: 70%;
+    width: 65%;
     margin: 2rem auto;
 }
 .movie-card {
     display: flex;
     background: #292929;
     /* border-radius:5px; */
-    border-bottom: 1px solid #f8f8f8;
+    border-bottom: 1px solid #b4b4b4;
     text-decoration: none;
     color:white;
 }
 .movie-card img{
-    width: 160px;
+    width: 140px;
 }
 .card-right {
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.card-right h1{
+    color: wheat;
+    font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+}
+.card-right p{
+    font-size: clamp(0.7rem, 0.627rem + 0.36vw, 0.9rem);
 }
 .card-right span{
     float: right;
