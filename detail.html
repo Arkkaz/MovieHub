@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-serif-sc-vf-regular/font.css"></link>
+    <link rel="stylesheet" href="css/jquery.raty.css">
+    <script src="https://kit.fontawesome.com/a440a3e78e.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.raty.js" type="text/javascript"></script>
+   
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">MovieHub</a>
+            <ul class="nav">
+                    <li>
+                        <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i>主页</a>
+                    </li>
+                    <li><a href="topRated.html">排行</a></li>
+                    <li><a href="#">最新</a></li>
+                    <li><a href="https://developer.themoviedb.org/docs/getting-started" target="_blank">API来源</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        <div id="search-bar" class="search">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="搜索影片">
+            </form>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="topLeft">
+            <h1 class="title" id="title"></h1>
+            <h2 class="title" id="orgTitle"></h2>
+            <div class="time">
+                <p id="relDate"></p>
+                <p id="runtime"></p>
+            </div>
+        </div>
+
+        <div class="topRight">
+            <p class="rate">评分<br>⭐<span id="rate"></span>/10</p>
+            <p class="rate">评分人数<br><span id="voteCount"></span></p>
+            <p class="rate">票房<br><span id="revenue"></span></p>
+        </div>
+
+        <div class="image">
+            <img src="" alt="" class="poster" id="poster">
+            <a href="" class="imdbPage" id="imdbPage">
+                <img src="" alt="" class="backdrop" id="backdrop">
+            </a>
+        </div>
+        <div class="intro">
+            <ul class="genres" id="genres">
+                <!-- <li class="genre" id="genre"></li> -->
+            </ul>
+            <p class="overview" id="overview"></p>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="revButton" id="revButton">     
+            <h1><i class="fa-regular fa-star"></i>点击评分&评论</h1>
+        </div>
+        <h1 class="revHead">Reviews</h1>
+        <div class="reviews" id="reviews">
+            <!-- <div class="review" id="review">
+                <div class="topRev">
+                    <div class="leftRev">
+                        <img src="" alt="avatar" class="avatar" id="avatar">
+                        <p class="username" id="username">xxx</p>
+                        <span class="revRating">⭐</span>
+                    </div>
+                    <div class="rightRev">
+                        <p class="comment" id="comment">xxxxxxx</p>
+                    </div>
+                </div>
+                <div class="bottomRev">
+                    <span class="pubTime" id="pubTime">2024-5-2</span>
+                    <a class="delete" id="delete" onclick="deleteReview(this)">删除</a>
+                </div> 
+            </div>   -->
+        </div>
+    </div>
+    <div id="background_div" >
+        <div id="ejectRate" class="ejectRate">
+            <i class="fa-solid fa-x" id="close"></i>
+            <div class="score">
+                <span id="score">?</span>
+            </div>
+
+            <div class="inner">
+                <h2 id="rateTitle"></h2>
+                <div id="raty"></div>
+                <textarea rows="4" cols="36" id="reviewInput"></textarea>
+            </div>
+           
+            <button id="revSubmit" disabled>提交</button>
+        </div>
+    </div>
+</body>
+<script src="js/detail.js"></script>
+</html>

@@ -1,0 +1,327 @@
+@import url('https://fonts.font.im/css?family=Libre+Baskerville');
+:root{
+    --primaryColor:#9e832a;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    background: #121212;
+    font-family: Roboto, "Source Han Serif SC VF", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.6s;
+}
+header {
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    margin-bottom: 10vh;
+    transition: 0.5s;
+    z-index: 3;
+}
+.logo {
+    color: wheat;
+    font-family: 'Libre Baskerville', serif;
+    text-decoration: none;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+    font-weight: 500
+}
+
+.nav{
+
+    display: flex;
+}
+.nav li {
+    font-size: clamp(0.7rem, 0.555rem + 0.73vw, 1.1rem);
+    list-style: none;
+    margin: 1vw;
+}
+
+.nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav li:hover a {
+    color: var(--primaryColor);
+}
+#search-bar {
+    position: relative;
+    min-width:300px;
+    height: 40px;
+}
+
+#search-bar input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #252525;
+    background:white;
+    /* border: 1solid rgba(255, 255, 255, 0.5); */
+    outline: none;
+    border-radius: 4px;
+    padding: 0 10px 0 20px !important;
+}
+#search-bar input::placeholder {
+    color: #222222;
+}
+.content{
+    color: wheat;
+    margin: auto;
+    margin-top: 16vh;
+    width:68vw;
+    /* min-height: 90vh; */
+}
+h1.title{
+    color: gold;
+    font-size: clamp(2rem, 1.467rem + 2.67vw, 3.6rem);
+    margin: 0;
+}
+h2.title{
+    color: rgb(163, 122, 72);
+    font-size: clamp(1rem, 0.8rem + 1vw, 1.6rem);
+}
+.topLeft{
+    float: left;
+    width: 60%;
+    min-height: 260px;
+}
+.time{
+    font-size: clamp(0.5rem, 0.333rem + 0.83vw, 1rem);
+    font-weight: 500;
+    color: rgb(207, 207, 207);
+    display: inline-flex;
+    margin-left: 20px;
+} 
+#runtime{
+    margin-left: 30px;
+}
+
+.topRight{
+    display: flex;
+    float: right;
+    width: 40%;
+    min-height: 260px;
+    position: relative;
+    right: -6%;
+    font-size: clamp(0.5rem, 0.467rem + 0.67vw, 1rem);
+    color: rgb(161, 161, 161);
+    font-weight: 700;
+}
+.rate{
+    text-align: center;
+    margin-left: 60px;
+}
+.topRight span{
+    position: relative;
+    color: whitesmoke;
+    font-size: clamp(0.7rem, 0.533rem + 0.83vw, 1.1rem);
+    letter-spacing: 1px;
+    top: 8px;
+}
+#rate{
+    font-size: clamp(0.8rem, 0.533rem + 1.33vw, 1.6rem);
+    color: white;
+    top: 3px;
+}
+.image{
+    width: 100%;
+    min-height: 439px;
+    margin-left: 110px;
+    display: flex;
+}
+.poster{
+    height: 439px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.795);
+}
+.backdrop{
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.795);
+}
+.genres{
+    display: flex;
+    list-style: none;
+    margin-top: 30px;
+}
+.genre{
+    color: whitesmoke;
+    font-weight: 600;
+    margin-right: 9px;
+    border: solid 1px rgb(71, 71, 71);
+    border-radius: 12px;
+    padding: 1px 6px;
+}
+.overview{
+    margin: auto;
+    width: 90%;
+    margin-top: 30px;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.3rem);
+    font-weight: 600;
+}
+
+
+
+/* 评论底部 */
+.bottom{
+    width: 68vw;
+    margin: auto;
+    margin-top: 10vh;
+
+}
+.revButton{
+    margin: auto;
+    width: 38%;
+    cursor: pointer;
+    text-align: center;
+    color: #6796ee;
+    font-size: 1.2rem;
+}
+
+/* 弹出评论框 */
+#background_div{
+    background-color:rgba(0, 0, 0, 0.63);
+    position: absolute;
+    display: none;
+
+}
+.ejectRate{
+    position: relative;
+    border-radius: 8px;
+    text-align: center;
+    width: 32vw;
+    top: 30vh;
+    margin: auto;
+    background-color: #1f1f1f;
+    min-height: 36vh;
+    display: none;
+}
+#close{
+    color: white;
+    margin:0.6vw;
+    float: right;
+    cursor: pointer;
+}
+.score{
+    height: 128px;
+    width: 128px;
+    background: url(../assets/rateScore.png) no-repeat;
+    margin: auto;
+    position:relative;
+    top: -7vh;
+}
+.score span{
+    position: relative;
+    top: 4vh;
+    color: white;
+    font-size: 3rem;
+}
+.inner{
+    margin-top: -10vh;
+}
+.inner h2{
+    font-size: clamp(1rem, 0.567rem + 2.17vw, 2.3rem);
+    color: white;
+    margin-bottom: 2vh;
+}
+#raty{
+    letter-spacing: 0.2vw;
+    margin-bottom: 2vh;
+}
+textarea{
+    border-radius: 6px;
+    color: whitesmoke;
+    margin: auto;
+    display: block;
+    resize: none;
+    font-size: clamp(0.1rem, -0.3rem + 2vw, 1.2rem);
+    background-color: #1f1f1f;
+    margin-bottom: 3vh;
+}
+#revSubmit{
+    width: 62%;
+    height: 32px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Roboto, "Source Han Serif SC VF", sans-serif;
+    background-color: #444444;
+    color: gainsboro;
+    border-color: transparent;
+    box-shadow:none;
+    margin-bottom: 3vh;
+    transition: 0.5s;
+    font-weight: 550;
+    cursor: not-allowed;
+}
+
+.reviews{
+    width: 68vw;
+    background-color: rgba(41, 41, 41, 0.781);
+    margin-top: 6vh;
+    border-radius: 8px;
+    transition: 0.4s;
+    padding: 0;
+}
+.revHead{
+    color: coral;
+    font-size: 2.2rem;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    border-bottom: 10px solid #121212;
+}
+.topRev{
+    display: flex;
+}
+.leftRev{
+    padding-top: 40px;
+    text-align: center;
+    width: 13%;
+    font-size: clamp(0.7rem, 0.7rem + 0.5vw, 1.2rem);
+    font-weight: 600;
+}
+.rightRev{
+    width: 97%;
+}
+.avatar{
+    width: 75%;
+}
+.comment{
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+}
+.bottomRev{
+    width: 100%;
+    padding: 5px;
+    background-color: rgb(78, 78, 78)
+    /* border: 1px solid #8f8f8f; */
+}
+.pubTime{
+    /* float: right; */
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: clamp(0.5rem, 0.6rem + 0.5vw, 0.9rem);
+
+}
+.delete{
+    float: right;
+    margin-right: 5px;
+    font-size: clamp(0.5rem, 0.6rem + 0.5vw, 0.9rem);
+    cursor: pointer;
+    color: wheat;
+}

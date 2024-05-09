@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/topRated.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-serif-sc-vf-regular/font.css"></link>
     <script src="https://kit.fontawesome.com/a440a3e78e.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <title>Index</title>
+    <title>TOP RATED</title>
 </head>
-
 <body>
     <header>
         <a href="index.html" class="logo">MovieHub</a>
@@ -31,17 +30,23 @@
     </header>
 
     <div class="content">
-        <div>
-            <h1 id="category-title">热映推荐</h1>
+        <div id="movies-grid">
+            <!-- <a href="detail.html?movie_id=${data.id}" class="movie-card" id="movieCard">
+                <img src="${posterPath}"/>
+                <div class="card-right">
+                    <h1>${index+1}. ${data.title}</h1>
+                    <p>${data.overview}</p>
+                    <span>⭐${Number(data.vote_average).toFixed(1)}</span>
+                </div>
+            </a> -->
         </div>
-        <div id="movies-grid"></div>
     </div>
    
     <div id="footer">
         <img src="assets/logo.svg" alt="logo" onclick="window.open('https://www.themoviedb.org')">
         <p> Not endorsed or certified by TMDB.</p>
     </div>
-    
+
 </body>
-<script src="js/index.js"></script>
+<script src="js/topRate.js"></script>
 </html>

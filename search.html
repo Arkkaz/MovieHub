@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-serif-sc-vf-regular/font.css"></link>
     <script src="https://kit.fontawesome.com/a440a3e78e.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <title>Index</title>
+    <style>
+    html{
+        font-family: Roboto, "Source Han Serif SC VF", sans-serif;
+    }
+    </style>
+    <title>Document</title>
 </head>
 
 <body>
@@ -26,22 +31,24 @@
         <div id="search-bar" class="search">
             <form id="search-form">
                 <input type="text" id="search-input" placeholder="搜索影片">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </form>
         </div>
     </header>
 
+
     <div class="content">
         <div>
-            <h1 id="category-title">热映推荐</h1>
+            <h1 id="category-title">搜索结果</h1>
         </div>
         <div id="movies-grid"></div>
     </div>
-   
+
     <div id="footer">
         <img src="assets/logo.svg" alt="logo" onclick="window.open('https://www.themoviedb.org')">
         <p> Not endorsed or certified by TMDB.</p>
     </div>
     
 </body>
-<script src="js/index.js"></script>
+<script src="js/search.js"></script>
 </html>

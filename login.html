@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a440a3e78e.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link href="css/login.css" rel="stylesheet">
+    <title>Login in</title>
+</head>
+<body>
+    <main class="container">
+        <h2>Login</h2>
+        <form action="index.html" onsubmit="return login()">
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" id="username"
+                    placeholder="用户名" required oninvalid="setCustomValidity('请输入用户名');" oninput="setCustomValidity('');">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" id="password"
+                    placeholder="密码" required oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');">
+                <i class="fa-solid fa-eye" id="eye"></i>
+                <div class="underline"></div>
+            </div>
+            <input type="submit" value="登录" id="loginBtn">
+        </form>
+        
+        <div class="footer">
+            <div class="social-fields">
+                <div class="social-field google">
+                    <a href="signup.html">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        去注册
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="bottomRectanle"></div>
+</body>
+<script src="./js/login.js"></script>
+</html>

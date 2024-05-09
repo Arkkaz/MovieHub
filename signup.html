@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a440a3e78e.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link href="css/signup.css" rel="stylesheet">
+    <title>Sign up</title>
+</head>
+
+<body>
+    <main class="container">
+        <h2>Sign up</h2>
+        <form action="login.html" onsubmit="return register()">
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" id="username" placeholder="用户名" required
+                    oninvalid="setCustomValidity('请输入用户名');" oninput="setCustomValidity('');" maxlength="16">
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" name="email" id="email" placeholder="电子邮箱" required
+                    oninvalid="setCustomValidity('请输入电子邮箱');" oninput="setCustomValidity('');" onblur="emailCheck()"
+                    maxlength="20">
+                <span class="err" id="emailerr" >格式错误</span>
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="设定密码" required
+                    oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');" maxlength="19">
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" id="repassword" placeholder="确认密码" required
+                    oninvalid="setCustomValidity('请确认密码');" oninput="setCustomValidity('');" onblur="pswCheck()"
+                    maxlength="19">
+                <span class="err" id="pswerr">密码不匹配</span>
+                <div class="underline"></div>
+            </div>
+
+            <input type="submit" value="注册" ">
+        </form>
+
+        <!-- <div class="footer">
+            <div class="social-fields">
+                <div class="social-field google">
+                    <a href="#">
+                        <i class="fab fa-google"></i>
+                        Sign in with Google
+                    </a>
+                </div>
+                <div class="social-field facebook">
+                    <a href="#">
+                        <i class="fab fa-microsoft"></i>
+                        Sign in with Facebook
+                    </a>
+                </div> 
+            </div>
+        </div> -->
+    </main>
+    <div class="bottomRectanle"></div>
+</body>
+<script src="./js/register.js"></script>
+</html>
